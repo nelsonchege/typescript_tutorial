@@ -1,6 +1,15 @@
-var character = "mario";
-console.log(character);
-var inputs = document.querySelectorAll("input");
-inputs.forEach(function (input) {
-    console.log(input);
-});
+// when declaring a list it will infer to the data initiolized with
+var characters = ["Mario", "Luigi", "Bowser", "Princes Peach"];
+//cannot
+// characters.push(10)
+//can
+characters.push("Yoshi");
+// you can also declare a list with mixed data types
+var mixed = [10, "hello", true];
+//for objects you can define a key/value pair with specific data types
+// once an object is created new keys cant be added and data type cant be changed
+var object = {
+    name: "Mario",
+    age: 30,
+    isBlackBelt: false,
+};

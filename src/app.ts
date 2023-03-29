@@ -1,9 +1,9 @@
 class Invoice {
 
-      finance_type: string;
-      name: string;
-      details: string;
-      amount: number;
+      readonly finance_type: string;
+      private name: string;
+      private details: string;
+      public amount: number;
 
       constructor(a:string,b:string,c:string,d:number){
           this.finance_type = a;

@@ -1,4 +1,7 @@
 import { Invoice } from './classes/Invoces.js';
+import { Payment } from './classes/Payment.js';
+import { Formatter } from './interfaces/Formatter.js';
+//creating an interface 
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
@@ -7,21 +10,19 @@ const toFrom = document.querySelector('#tofrom') as HTMLInputElement;
 const Details = document.querySelector('#details') as HTMLInputElement;
 const Amount = document.querySelector('#amount') as HTMLInputElement;
 
-form.addEventListener('submit',(e:Event)=>{
+form.addEventListener('submit',(e:Event)=> {
       e.preventDefault();
-      console.log(
-        finance_type.value,
-        toFrom.value,
-        Details.value,
-        Amount.valueAsNumber
-      );
 
-      const Invoice1 = new Invoice(finance_type.value,
-        toFrom.value,
-        Details.value,
-        Amount.valueAsNumber)
+      let doc:Formatter;
+
+      if(finance_type.value==="invoice"){
+        doc = new Invoice( toFrom.value,Details.value,Amount.valueAsNumber);
+      }else{
+        doc = new Payment( toFrom.value,Details.value,Amount.valueAsNumber);
+      }
       
-      console.log(Invoice1.format());
+      console.log(doc)
+
       
 })
 

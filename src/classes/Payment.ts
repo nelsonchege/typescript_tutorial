@@ -1,6 +1,6 @@
-import {Formatter} from '../interfaces/Formatter.js'
+import {Formatter} from '../interfaces/Formatter.js';
 
-export class Invoice implements Formatter {
+export class Payment implements Formatter {
 
     private recipient: string;
     private details: string;
@@ -13,6 +13,6 @@ export class Invoice implements Formatter {
     }
 
     format(){
-      return `${this.recipient} owes ksh${this.amount} for ${this.details}`
+      return `${this.recipient} Amount:ksh${this.amount} for ${this.details} `
     }
 }

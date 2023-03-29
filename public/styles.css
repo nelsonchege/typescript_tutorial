@@ -20,6 +20,10 @@ li {
   border: 1px solid #eee;
   margin: 10px auto;
 }
+li:hover  {
+  border: 2px solid #ff0aa7;
+  margin: 20px auto;
+}
 li h4 {
   color: #ff0aa7;
   margin: 0;

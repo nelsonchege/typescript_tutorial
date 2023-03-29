@@ -1,4 +1,4 @@
 export interface Formatter {
-    format:()=>void;
+    format:()=>string;
 }
   

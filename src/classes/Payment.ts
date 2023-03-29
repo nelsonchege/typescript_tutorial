@@ -13,6 +13,6 @@ export class Payment implements Formatter {
     }
 
     format(){
-      return `${this.recipient} Amount:ksh${this.amount} for ${this.details} `
+      return `${this.recipient} Owed ksh${this.amount} for ${this.details} `
     }
 }

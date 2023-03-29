@@ -1,6 +1,10 @@
-var character = "mario";
-console.log(character);
-var inputs = document.querySelectorAll("input");
-inputs.forEach(function (input) {
-    console.log(input);
-});
+"use strict";
+const LoginDetails = (uid, password) => {
+    let name = 'Mario';
+    let user = { uid: uid, name };
+    return user;
+};
+const greet = (user) => {
+    return `hello ${user.name}`;
+};
+console.log(greet(LoginDetails('232323', 'password')));
